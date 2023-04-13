@@ -1,0 +1,150 @@
+   TUTORIAL MAKING CONTACT BOOK USING PYTHON
+https://realpython.com/python-contact-book/
+In this tutorial, you’ll learn how to:
+
+    Create a graphical user interface (GUI) for your contact book application using Python and PyQt
+    Connect the application to an SQLite database using PyQt’s SQL support
+    Manage contact data using PyQt’s Model-View architecture
+
+At the end of this project, you’ll have a functional contact book application that will allow you to store and manage your contact information.
+
+To get the complete source code for the application as well as the code for every step you’ll go through in this tutorial, click the link below:
+
+Get the Source Code: Click here https://realpython.com/bonus/python-contact-book-code/  to get the source code you’ll use to build a contact book with Python, PyQt, and SQLite in this tutorial.
+(1) The project structure. There will be one foleder rpcontacts_project_stage1/stage2/....final etc. Inside which there will be a folder
+containing App_Name (rpcontacts). Inside rpcontacts/ there will be four files  
+    __init__.py
+    views.py
+    database.py
+    main.py
+    model.py
+(2) Outside rpcontacts folder there will be two files
+   requirements.txt
+   Readme.md
+   rpcontacts.py
+====================================  STEP 1 Step 1: Creating the Contact Book’s Skeleton App With PyQt ======================================================
+
+(3-A)open USING CS CODE folder C:\Users\Ecube\Downloads\WORKING_PROJECTS\ELEARN_TEJAS_PYTHON_BASIC\REALPYTHON\materials\python-contact-book\source_code_step_1
+ ======================================================================================================================================================================
+ENVIRONMENT CREATION AND ACTIVATION
+=======================================================================================================================================================================
+To run RP Contacts, you need to download the source code. Then open a terminal or command-line window and run the following steps:
+
+    Create and activate a Python virtual environment
+
+$ cd rpcontacts/
+$ python -m venv ./venv
+$ source venv/bin/activate  (FOR LINUX) OR FOR WINDOWS (a) cd venv (b) .\Scripts\activate. THE PROMPT SHOULD SHOW (venv) on left side
+(venv) $
+=======================================================================================================================================================================
+    Install the dependencies
+
+=======================================================================================================================================================================
+do cd .. and again cd .. to enter the same directory where requirements.txt file lies and install requirements as below
+
+(venv) $ python -m pip install -r requirements.txt
+========================================================
+    Run the application
+=========================================================
+cd to directory where rpcontacts.py file lies and run the file
+(venv) $ python rpcontacts.py
+
+AN EMPTY WINDOW TITLED rpcontacts WILL BE DISPLAYED AT STAGE -1
+
+Note: This application was coded and tested using Python 3.8.5 and PyQt 5.15.2.
+
+==============================================STEP 2  Step 2: Building the Contact Book’s GUI With Python =================================================  
+
+(3-B)open USING VSCODE folder C:\Users\Ecube\Downloads\WORKING_PROJECTS\ELEARN_TEJAS_PYTHON_BASIC\REALPYTHON\materials\python-contact-book\source_code_step_2
+
+Between step -1 and stp-2 only views.py file changes dignificantly. Once again cd to rpcontacts/ and create virtual environmnt, install dependencies and requirements.txt file
+
+========================================================
+    Run the application
+=========================================================
+cd to directory where rpcontacts.py file lies and run the file
+(venv) $ python rpcontacts.py
+
+IN THE EMPTY WINDOW TITLED rpcontacts WILL BE DISPLAYED AT STAGE -2  as was at end of stage -1 but it will have facility to minimize, maximze, close window. Also it will have add, delete, Clear All button.
+
+=========================================================================================================================================================================
+=== STEP 3 and 4 Setting Up the Contact Book’s Database Connecting to the Database With PyQt and SQLite AND Creating the contacts Table by modifying database.py file ===
+=========================================================================================================================================================================
+
+(3-B)open USING VSCODE folder C:\Users\Ecube\Downloads\WORKING_PROJECTS\ELEARN_TEJAS_PYTHON_BASIC\REALPYTHON\materials\python-contact-book\source_code_step_4 
+(step -3 did not ptoduce any new output)
+
+A very important new file added is database.py inside rpcontacts folder. Also a contacts.sqlite database is added outside rpcontacts folder.
+requirements.txt file
+Creating the contacts Table
+With the function that creates and opens the connection to the database in place, you can proceed to code a helper function to create the contacts table. You’ll use this table to store the information about your contacts.
+
+    Create and activate a Python virtual environment
+
+$ cd rpcontacts/
+$ python -m venv ./venv
+$ source venv/bin/activate  (FOR LINUX) OR FOR WINDOWS (a) cd venv (b) .\Scripts\activate. THE PROMPT SHOULD SHOW (venv) on left side
+(venv) $
+=======================================================================================================================================================================
+    Install the dependencies
+
+=======================================================================================================================================================================
+do cd .. and again cd .. to enter the same directory where requirements.txt file lies and install requirements as below
+(venv) $ python -m pip install -r requirements.txt
+
+
+========================================================
+    Run the application
+=========================================================
+cd to directory where rpcontacts.py file lies and run the file
+(venv) $ python rpcontacts.py
+
+A WINDOW TITLED rpcontacts WILL BE DISPLAYED AT STAGE -3,4  APART FROM MINIMIZE, MAXIMIZE AND CLOSE FACILITY AND 
+Add, Delete, ClearAll buttons, we can see a populated table with 5 records appears. It has four fields, ID, Name, Job, Email
+
+HOWEVER STILL PRESSING Add, Delete, ClearAll buttons DOES NOTHING.
+=====================================================================================================================================
+
+STEP-5
+(A) Open using VS CODE folder  C:\Users\Ecube\Downloads\WORKING_PROJECTS\ELEARN_TEJAS_PYTHON_BASIC\REALPYTHON\materials\python-contact-book\source_code_step_5
+(B) cd rpcontacts/
+(C) python -m venv ./venv
+(D) source venv/bin/activate  (FOR LINUX) OR FOR WINDOWS (a) cd venv (b) .\Scripts\activate. THE PROMPT SHOULD SHOW (venv) on left side
+(venv) $
+=======================================================================================================================================================================
+    Install the dependencies
+=======================================================================================================================================================================
+do cd .. and again cd .. to enter the same directory where requirements.txt file lies and install requirements as below
+(venv) $ python -m pip install -r requirements.txt
+========================================================
+    Run the application
+=========================================================
+cd to directory where rpcontacts.py file lies and run the file
+(venv) $ python rpcontacts.py
+
+Now  ONE ADDED FUNCTIONALITY IS AVAILABLE SO THAT using Add button in user interface new record clan be added. THIS CLEARLY PROVES THAT A CONNECTION 
+BETWEEN SQLITE DATABASE AND PYTHON SCRIPT IS ESTABLISHED. 'Delete' or 'Clear All' buttons do not work still.
+
+
+STEP-6
+(A) Open using VS CODE folder  C:\Users\Ecube\Downloads\WORKING_PROJECTS\ELEARN_TEJAS_PYTHON_BASIC\REALPYTHON\materials\python-contact-book\source_code_step_6
+(B) cd rpcontacts/
+(C) python -m venv ./venv
+(D) source venv/bin/activate  (FOR LINUX) OR FOR WINDOWS (a) cd venv (b) .\Scripts\activate. THE PROMPT SHOULD SHOW (venv) on left side
+(venv) $
+=======================================================================================================================================================================
+    Install the dependencies
+=======================================================================================================================================================================
+do cd .. and again cd .. to enter the same directory where requirements.txt file lies and install requirements as below
+(venv) $ python -m pip install -r requirements.txt
+========================================================
+    Run the application
+=========================================================
+cd to directory where rpcontacts.py file lies and run the file
+(venv) $ python rpcontacts.py
+
+The functionality remains same but even if you deleted all records or intserted new records in previous step they are not visible. Instead the original records in 
+database as were there in step -3/4 are re-populated.
+================================================================================================================================================================
+
+
